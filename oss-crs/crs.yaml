@@ -23,9 +23,12 @@ crs_run_phase:
   finder:
     dockerfile: oss-crs/finder.Dockerfile
     additional_env:
+      # Default values. To override, set additional_env in compose yaml.
       CRS_AGENT: gemini_cli
-      # GEMINI_MODEL: gemini-3-pro-preview
+      # GEMINI_CLI_VERSION: "0.28.2"  # Optional prepare-phase override for base image build
+      # GEMINI_MODEL: gemini-3-pro-preview  # Optional override (default if unset)
       # AGENT_TIMEOUT: "0"  # seconds, 0 = no limit (default)
+      # BUILDER_MODULE: "inc-builder-asan"  # Builder sidecar module (must match run_snapshot module name)
   inc-builder-asan:
     run_snapshot: true
     dockerfile: oss-crs-infra:default-builder
