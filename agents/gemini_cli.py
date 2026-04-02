@@ -70,8 +70,8 @@ def _list_input_files(input_dir: Path, *, non_empty_only: bool = False) -> list[
 
 
 def _install_skills(source_dir: Path, harness: str, builder: str) -> None:
-    """Copy skills from package data into source_dir/.gemini/skills/."""
-    target_skills = source_dir / ".gemini" / "skills"
+    """Copy skills from package data into source_dir/.agents/skills/."""
+    target_skills = source_dir / ".agents" / "skills"
     if not _SKILLS_DIR.exists():
         logger.warning("Skills directory not found: %s", _SKILLS_DIR)
         return

@@ -32,7 +32,7 @@ Verify a POV candidate:
 Rebuild harness with source modifications (e.g., debug logs):
   `libCRS apply-patch-build <patch.diff> <response_dir> --builder {builder}`
 
-See skills in `.gemini/skills/` for detailed usage:
+See skills in `.agents/skills/` for detailed usage:
 - `verify-pov` — Full `run-pov` docs, examples, crash indicators by language
 - `rebuild-harness` — How to edit source, rebuild, and test with a modified harness
 
