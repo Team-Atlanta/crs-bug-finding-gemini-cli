@@ -264,7 +264,6 @@ def run(
         GEMINI_MODEL,
         "--approval-mode",
         "yolo",
-        "-d",
         "-p",
         prompt,
     ]
