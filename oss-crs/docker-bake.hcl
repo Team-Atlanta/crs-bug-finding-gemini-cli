@@ -18,7 +18,7 @@ variable "VERSION" {
 }
 
 variable "GEMINI_CLI_VERSION" {
-  default = "0.28.2"
+  default = "0.38.1"
 }
 
 function "tags" {
