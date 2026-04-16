@@ -14,19 +14,18 @@ variable "REGISTRY" {
 }
 
 variable "VERSION" {
-  default = "latest"
+  default = "cli-0.9.0"
 }
 
 variable "GEMINI_CLI_VERSION" {
-  default = "0.38.1"
+  default = "0.9.0"
 }
 
 function "tags" {
   params = [name]
   result = [
     "${REGISTRY}/${name}:${VERSION}",
-    "${REGISTRY}/${name}:latest",
-    "${name}:latest"
+    "${name}:${VERSION}"
   ]
 }
 

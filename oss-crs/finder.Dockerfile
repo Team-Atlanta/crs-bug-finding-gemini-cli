@@ -10,7 +10,7 @@
 ARG target_base_image
 ARG crs_version
 
-FROM gemini-cli-bug-finding-base
+FROM gemini-cli-bug-finding-base:cli-0.9.0
 
 # Install libCRS (CLI + Python package)
 COPY --from=libcrs . /libCRS
